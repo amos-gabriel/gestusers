@@ -10,7 +10,7 @@ public class DbConnection {
             Class.forName("org.postgresql.Driver");     
             
             // Connexion à ma BD pgAdmin (port 5432)
-            return DriverManager.getConnection("jdbc:postgresql://localhost:5432/gesuser_db", "postgres", "postgres");
+            return DriverManager.getConnection("jdbc:postgresql://100.87.38.32:5432/gesusers", "extuser", "Pg@2026");
             
         } catch (ClassNotFoundException e) {
             System.err.println("Driver PostgreSQL non trouvé : " + e.getMessage());

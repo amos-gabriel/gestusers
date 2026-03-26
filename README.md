@@ -12,4 +12,4 @@ L'application permet d'ajouter, de lister, de modifier et de supprimer des utili
 * **Design :** CSS3 (Thème Bleu Professionnel) & JSTL
 
 ## 👤 Auteur
-**ADJIFATOU DIOP** - Étudiante en M2 Génie Logiciel et Systèmes d'Information (2026).
+**Koffi Amos Sivitra** - M2 Soir Génie Logiciel et Systèmes d'Information (2026).

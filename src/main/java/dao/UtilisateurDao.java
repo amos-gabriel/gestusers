@@ -8,7 +8,7 @@ import java.sql.Statement;
 import java.sql.PreparedStatement;
 import java.util.ArrayList;
 
-public class UtilisateurDao {
+public class UtilisateurDao { 
 
     private static final String COLUMN_ID = "id";
     private static final String COLUMN_NOM = "nom";
@@ -16,15 +16,15 @@ public class UtilisateurDao {
     private static final String COLUMN_LOGIN = "login";
     private static final String COLUMN_PASSWORD = "password";
 
-    private static final String SELECT_ALL_USERS_QUERY = "SELECT * FROM utilisateur";
-    private static final String ADD_USER_QUERY = "INSERT INTO utilisateur (" 
+    private static final String SELECT_ALL_USERS_QUERY = "SELECT * FROM users";
+    private static final String ADD_USER_QUERY = "INSERT INTO users (" 
         + COLUMN_NOM + ", " + COLUMN_PRENOM + ", " + COLUMN_LOGIN + ", " + COLUMN_PASSWORD 
         + ") VALUES (?, ?, ?, ?)";
-    private static final String UPDATE_USER_QUERY = "UPDATE utilisateur SET " 
+    private static final String UPDATE_USER_QUERY = "UPDATE users SET " 
         + COLUMN_NOM + " = ?, " + COLUMN_PRENOM + " = ?, " 
         + COLUMN_LOGIN + " = ?, " + COLUMN_PASSWORD + " = ? WHERE id = ?";
-    private static final String DELETE_USER_QUERY = "DELETE FROM utilisateur WHERE id = ?";
-    private static final String SELECT_USER_BY_ID_QUERY = "SELECT * FROM utilisateur WHERE id = ?";
+    private static final String DELETE_USER_QUERY = "DELETE FROM users WHERE id = ?";
+    private static final String SELECT_USER_BY_ID_QUERY = "SELECT * FROM users WHERE id = ?";
 
     // Ajouter un utilisateur
     public static boolean addUser(Utilisateur utilisateur) {

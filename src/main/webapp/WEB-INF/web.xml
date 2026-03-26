@@ -1,6 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd" id="WebApp_ID" version="5.0">
+  
   <display-name>gesusers</display-name>
+
+  <!-- SERVLET POUR LISTER LES UTILISATEURS -->
+  <servlet>
+    <servlet-name>ListUsers</servlet-name>
+    <servlet-class>servlets.ListUsers</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ListUsers</servlet-name>
+    <url-pattern>/list</url-pattern>
+  </servlet-mapping>
+
+  <!-- SERVLET POUR AJOUTER UN UTILISATEUR -->
+  <servlet>
+    <servlet-name>AddUser</servlet-name>
+    <servlet-class>servlets.AddUser</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddUser</servlet-name>
+    <url-pattern>/add</url-pattern>
+  </servlet-mapping>
+
+  <!-- SERVLET POUR METTRE À JOUR UN UTILISATEUR -->
+  <servlet>
+    <servlet-name>UpdateUser</servlet-name>
+    <servlet-class>servlets.UpdateUser</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateUser</servlet-name>
+    <url-pattern>/update</url-pattern>
+  </servlet-mapping>
+
+  <!-- SERVLET POUR SUPPRIMER UN UTILISATEUR -->
+  <servlet>
+    <servlet-name>DeleteUser</servlet-name>
+    <servlet-class>servlets.DeleteUser</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteUser</servlet-name>
+    <url-pattern>/delete</url-pattern>
+  </servlet-mapping>
+  
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.jsp</welcome-file>
@@ -9,10 +51,12 @@
     <welcome-file>default.jsp</welcome-file>
     <welcome-file>default.htm</welcome-file>
   </welcome-file-list>
+  
   <jsp-config>
     <jsp-property-group>
       <url-pattern>*.jsp</url-pattern>
       <page-encoding>UTF-8</page-encoding>
     </jsp-property-group>
   </jsp-config>
+  
 </web-app>
