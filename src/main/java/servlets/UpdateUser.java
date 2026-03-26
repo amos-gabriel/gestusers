@@ -12,7 +12,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
-@WebServlet("/update")
+// @WebServlet("/update")
 public class UpdateUser extends HttpServlet {
 	private static final String VUE_UPDATE_USER = "/WEB-INF/modifierUtilisateur.jsp";
 

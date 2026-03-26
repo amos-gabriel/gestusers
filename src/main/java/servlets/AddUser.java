@@ -13,7 +13,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
 
-@WebServlet("/add")
+// @WebServlet("/add")
 public class AddUser extends HttpServlet
 {
 	private static final String VUE_ADD_USER = "/WEB-INF/ajouterUtilisateur.jsp";

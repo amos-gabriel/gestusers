@@ -11,7 +11,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
 
-@WebServlet("/list")
+// @WebServlet("/list")
 public class ListUsers extends HttpServlet {
     private static final String VUE_LIST_USERS = "/WEB-INF/listerUtilisateur.jsp";
 

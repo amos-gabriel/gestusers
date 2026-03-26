@@ -28,7 +28,7 @@ public class UtilisateurDao {
 
     // Ajouter un utilisateur
     public static boolean addUser(Utilisateur utilisateur) {
-        try (Connection connection = ConnectionManager.getConnection();
+        try (Connection connection = DbConnection.getConnection();
              PreparedStatement pstmt = connection.prepareStatement(ADD_USER_QUERY)) {
             
             pstmt.setString(1, utilisateur.getNom());
@@ -46,7 +46,7 @@ public class UtilisateurDao {
     // Récupérer tous les utilisateurs
     public static ArrayList<Utilisateur> getUsers() {
         ArrayList<Utilisateur> liste = new ArrayList<>();
-        try (Connection connection = ConnectionManager.getConnection();
+        try (Connection connection = DbConnection.getConnection();
              Statement statement = connection.createStatement();
              ResultSet rs = statement.executeQuery(SELECT_ALL_USERS_QUERY)) {
 
@@ -67,7 +67,7 @@ public class UtilisateurDao {
 
     // Supprimer un utilisateur par ID
     public static boolean deleteUser(int id) {
-        try (Connection connection = ConnectionManager.getConnection();
+        try (Connection connection = DbConnection.getConnection();
              PreparedStatement pstmt = connection.prepareStatement(DELETE_USER_QUERY)) {
             pstmt.setInt(1, id);
             return pstmt.executeUpdate() > 0;
@@ -79,7 +79,7 @@ public class UtilisateurDao {
             
     // Récupérer un utilisateur par ID
     public static Utilisateur getUserById(int id) {
-        try (Connection connection = ConnectionManager.getConnection();
+        try (Connection connection = DbConnection.getConnection();
              PreparedStatement pstmt = connection.prepareStatement(SELECT_USER_BY_ID_QUERY)) {
             pstmt.setInt(1, id);
             try (ResultSet rs = pstmt.executeQuery()) {
@@ -101,7 +101,7 @@ public class UtilisateurDao {
 
     // Mettre à jour un utilisateur par ID
     public static boolean updateUser(int id, Utilisateur user) {
-        try (Connection connection = ConnectionManager.getConnection();
+        try (Connection connection = DbConnection.getConnection();
              PreparedStatement pstmt = connection.prepareStatement(UPDATE_USER_QUERY)) {
             
             pstmt.setString(1, user.getNom());
